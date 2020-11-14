@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "expectedGains": 5000,
+    "previousGains": 4500,
+    "minInvest": 500,
+    "investmentType": "CDB",
+    "risk": 4
+  },
+  {
+    "id": 2,
+    "expectedGains": 5500,
+    "previousGains": 5100,
+    "minInvest": 500,
+    "investmentType": "CDI",
+    "risk": 6
+  },
+  {
+    "id": 3,
+    "expectedGains": 3000,
+    "previousGains": 3000,
+    "minInvest": 100,
+    "investmentType": "LCI",
+    "risk": 3
+  },
+  {
+    "id": 4,
+    "expectedGains": 2000,
+    "previousGains": 1800,
+    "minInvest": 100,
+    "investmentType": "Tesouro Direto",
+    "risk": 2
+  },
+  {
+    "id": 5,
+    "expectedGains": 4000,
+    "previousGains": 4200,
+    "minInvest": 2000,
+    "investmentType": "CDI",
+    "risk": 8
+  }
+]

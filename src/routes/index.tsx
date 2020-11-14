@@ -1,7 +1,7 @@
 import React from 'react';
 
-import AppRoutes from './app.routes';
+import TabRoutes from './tab.routes';
 
-const Routes: React.FC = () => <AppRoutes />;
+const Routes: React.FC = () => <TabRoutes />;
 
 export default Routes;

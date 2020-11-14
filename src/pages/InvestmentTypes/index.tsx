@@ -1,20 +1,14 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/Feather';
 
-import { View } from 'react-native';
-import api from './api.json';
+import { Image, View } from 'react-native';
+
+import Logo from '../../assets/orama.png';
 
 import {
   Container,
-  PromptContainer,
-  PromptMain,
-  PromptSecondary,
-  Button1,
-  Button2,
-  ButtonsContainer,
-  ButtonText,
   Carousel,
   Flashcard,
   FlashcardTitle,
@@ -23,10 +17,34 @@ import {
   FlashcardButtonText,
   CarouselPrevious,
   CarouselNext,
+  ImageContainer,
+  IconContainer,
 } from './styles';
 
+const info = [
+  {
+    icon: 'dollar-sign',
+    color: '#ffb15e',
+    title: 'Como você quer investir hoje?',
+    text: 'Explore e descubra na prática o seu perfil de investidor!',
+    button: false,
+  },
+  {
+    color: '#129d9f',
+    title: 'Quero proteger o meu dinheiro',
+    text: 'Investimentos de menor risco e retorno mais demorado',
+    button: true,
+  },
+  {
+    color: '#129d9f',
+    title: 'Quero arriscar mais',
+    text: 'Investimentos com maior risco e retornos mais rápidos',
+    button: true,
+  },
+];
+
 const InvestmentStyles: React.FC = () => {
-  const [data, setData] = useState(api);
+  const [data, setData] = useState(info);
   const [current, setCurrent] = useState(0);
 
   const navigation = useNavigation();
@@ -43,62 +61,44 @@ const InvestmentStyles: React.FC = () => {
     if (current === 0) {
       setCurrent(data.length - 1);
     } else {
-      setCurrent(0);
+      setCurrent(old => old - 1);
     }
   }, [current, data]);
 
   return (
     <Container>
-      <PromptContainer>
-        <PromptMain>No que quer investir?</PromptMain>
-        <ButtonsContainer>
-          <Button1 onPress={() => console.log('hi')}>
-            <ButtonText>Top Investimentos</ButtonText>
-          </Button1>
-          <Button2 onPress={() => console.log('hi')}>
-            <ButtonText>Todos</ButtonText>
-          </Button2>
-        </ButtonsContainer>
-      </PromptContainer>
-      <PromptContainer>
-        <PromptMain>Quer começar com quanto?</PromptMain>
-        <PromptSecondary>R$ 5500.00</PromptSecondary>
-      </PromptContainer>
+      <ImageContainer>
+        <Image source={Logo} />
+      </ImageContainer>
 
       <Carousel>
-        <Flashcard style={{ backgroundColor: '#24c6dc' }} />
-
         <CarouselPrevious onPress={handlePrevious}>
-          <Icon name="chevron-left" size={48} color="#3d5198" />
+          <Icon name="chevron-left" size={48} color="#f5f5f5" />
         </CarouselPrevious>
 
         <CarouselNext onPress={handleNext}>
-          <Icon name="chevron-right" size={48} color="#3d5198" />
+          <Icon name="chevron-right" size={48} color="#f5f5f5" />
         </CarouselNext>
 
-        <Flashcard
-          style={{
-            shadowColor: '#000',
-            shadowOffset: {
-              width: 0,
-              height: 6,
-            },
-            shadowOpacity: 0.39,
-            shadowRadius: 8.3,
+        <Flashcard>
+          {data[current].icon && (
+            <IconContainer>
+              <Icon name="dollar-sign" size={64} color="#129d9f" />
+            </IconContainer>
+          )}
 
-            elevation: 13,
-          }}
-        >
-          <View>
-            <FlashcardTitle>{data[current].title}</FlashcardTitle>
-            <FlashcardText>{data[current].text}</FlashcardText>
-          </View>
-          <FlashcardButton onPress={() => navigation.navigate('Investments')}>
-            <FlashcardButtonText>Quero Saber Mais</FlashcardButtonText>
-          </FlashcardButton>
+          <FlashcardTitle>{data[current].title}</FlashcardTitle>
+          <FlashcardText>{data[current].text}</FlashcardText>
+
+          {data[current].button && (
+            <FlashcardButton
+              onPress={() => navigation.navigate('Investments')}
+              style={{ backgroundColor: '#129d9f' }}
+            >
+              <FlashcardButtonText>Saber Mais</FlashcardButtonText>
+            </FlashcardButton>
+          )}
         </Flashcard>
-
-        <Flashcard style={{ backgroundColor: '#24c6dc' }} />
       </Carousel>
     </Container>
   );

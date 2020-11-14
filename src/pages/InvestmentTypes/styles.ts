@@ -2,72 +2,29 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   flex: 1;
-  background: #dcf5fe;
-  padding: 64px 24px 40px;
+  background: #2d187e;
+  padding: 56px 0px 0px;
 `;
 
-export const PromptContainer = styled.View`
-  margin-bottom: 24px;
-`;
-
-export const PromptMain = styled.Text`
-  font-size: 26px;
-  color: #3d5198;
-  font-family: 'Roboto-Regular';
-  margin-bottom: 12px;
-`;
-
-export const PromptSecondary = styled.Text`
-  font-size: 22px;
-  color: #3d5198;
-  font-family: 'Roboto-Light';
-  margin-bottom: 8px;
-`;
-
-export const ButtonsContainer = styled.View`
-  flex-direction: row;
+export const ImageContainer = styled.View`
   align-items: center;
   justify-content: center;
-`;
-
-export const Button1 = styled.TouchableOpacity`
-  background: #ed8f03;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 12px;
-  border-radius: 16px;
-  margin-right: 12px;
-`;
-
-export const Button2 = styled.TouchableOpacity`
-  background: #8e7efb;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 12px;
-  border-radius: 16px;
-`;
-
-export const ButtonText = styled.Text`
-  font-size: 16px;
-  font-family: 'Roboto-Medium';
-  color: #f5f5f5;
+  margin-bottom: 40px;
 `;
 
 export const Carousel = styled.View`
   flex-direction: row;
   box-shadow: 10px 5px 5px black;
   justify-content: center;
+  flex: 1;
 `;
 
 export const Flashcard = styled.View`
-  padding: 16px;
-  background: #8e7ef8;
+  padding: 24px 16px;
+  background: #f5f5f5;
   border-radius: 16px;
-  box-shadow: 10px 5px 5px black;
-  width: 275px;
-  height: 320px;
+  width: 320px;
+  height: 274px;
   margin: 0 16px;
   justify-content: space-between;
 `;
@@ -75,10 +32,14 @@ export const Flashcard = styled.View`
 export const FlashcardTitle = styled.Text`
   width: 100%;
   text-align: center;
-  font-size: 22px;
-  font-family: 'Roboto-Bold';
-  color: #f5f5f5;
-  margin-bottom: 24px;
+  font-size: 24px;
+  font-family: 'Roboto-Medium';
+  color: #444;
+`;
+
+export const IconContainer = styled.View`
+  align-items: center;
+  justify-content: center;
 `;
 
 export const FlashcardText = styled.Text`
@@ -86,7 +47,7 @@ export const FlashcardText = styled.Text`
   font-size: 20px;
   font-family: 'Roboto-Regular';
   line-height: 26px;
-  color: #f5f5f5;
+  color: #666;
 `;
 
 export const FlashcardButton = styled.TouchableOpacity`
@@ -101,7 +62,7 @@ export const FlashcardButton = styled.TouchableOpacity`
 export const FlashcardButtonText = styled.Text`
   font-family: 'Roboto-Medium';
   font-size: 16px;
-  color: #483f85;
+  color: #f5f5f5;
 `;
 
 export const CarouselPrevious = styled.TouchableOpacity`
