@@ -11,11 +11,11 @@ usuário aplicadas por empresas como Netflix e Spotify. O objetivo é se comunic
 público de uma maneira clara e usando menos o “economês”.
 
 ## Visual
-<img src="https://github.com/viQcinese/documentation/blob/master/orama-investimentos/orama-usability.gif?raw=true" width="35%" height="35%"/>
+<img src="https://github.com/viQcinese/documentation/blob/master/orama-investimentos/orama-usability.gif?raw=true" width="25%" height="25%"/>
 
 ## Tecnologias
-<img align="left" alt="react" height="20px" src="https://raw.githubusercontent.com/viQcinese/viQcinese/master/src/react.svg" />ReactNative <br>
-<img align="left" alt="typescript" height="20px" src="https://raw.githubusercontent.com/viQcinese/viQcinese/master/src/typescript.svg" />Typescript <br>
+<img align="left" alt="react" height="24px" src="https://raw.githubusercontent.com/viQcinese/viQcinese/master/src/react.svg" />ReactNative <br>
+<img align="left" alt="typescript" height="24px" src="https://raw.githubusercontent.com/viQcinese/viQcinese/master/src/typescript.svg" />Typescript <br>
 
 ## Pré-requisitos
 - NodeJS e NPM/Yarn
