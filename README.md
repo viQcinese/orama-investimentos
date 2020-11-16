@@ -13,6 +13,10 @@ público de uma maneira clara e usando menos o “economês”.
 ## Visual
 <img src="https://github.com/viQcinese/documentation/blob/master/orama-investimentos/orama-usability.gif?raw=true" width="25%" height="25%"/>
 
+## Tecnologias
+<img align="left" alt="react" height="20px" src="https://raw.githubusercontent.com/viQcinese/viQcinese/master/src/react.svg" />ReactNative <br>
+<img align="left" alt="typescript" height="20px" src="https://raw.githubusercontent.com/viQcinese/viQcinese/master/src/typescript.svg" />Typescript <br>
+
 ## Pré-requisitos
 - NodeJS e NPM/Yarn
 - Android Studio
@@ -43,6 +47,6 @@ yarn android
 - **Dev. Frontend Web:** Maria Fernanda Lares Peroza - maria.lares.26@gmail.com
 - **Dev. Mobile:** Vitor Senise Furtado - vitor.senise@gmail.com
 
-## 📄 Licença 
+## Licença 
 
 Este projeto está sob a linceça MIT. - veja o aquivo [license txt](license.txt) para detalhes
